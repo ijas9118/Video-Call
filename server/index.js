@@ -1,7 +1,9 @@
 const { Server } = require("socket.io");
 
 const io = new Server(3000, {
-  cors: true,
+  cors: {
+    origin: "https://video-call-dusky-eight.vercel.app",
+  },
 });
 
 const emailToSocketId = new Map();
