@@ -10,7 +10,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props: { children: ReactNode }) => {
-  const socket = useMemo(() => io("172.16.3.250:3000"), []);
+  const socket = useMemo(() => io("https://video-call-server-gules.vercel.app"), []);
 
   return <SocketContext.Provider value={socket}>{props.children}</SocketContext.Provider>;
 };
